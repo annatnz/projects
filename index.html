@@ -1,100 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sommaire</title>
     <style>
-        body{
-            font-family: Arial, Helvetica, sans-serif;
+       * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Lora, serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(270deg, #ff9a9e, #fdcae1, #fad0c4, #a5eea0);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            flex-direction: column;
+            color: #333;
         }
 
-    table {
-        width: 50%;
-        border-collapse: collapse;
-        margin: 20px auto;
-        border-radius: 20px;
-        overflow: hidden;
-        border: 5px solid pink;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    
-    th, td {
-        padding: 20px;
-        text-align: center;
-        background-color: pink;
-        border-bottom: 1px solid pink; 
-       
-    }
-    
-    td {
-        background-color: #f0f0f0;
-    }
-    
-    tr:hover {
-        background-color: #eaeaea;
-    }
-    tr:hover {
-            background-color: #eaeaea;
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
-        td:hover {
-            background-color: pink; 
-            transform: scale(1.10); 
+        .header, .container {
+            background: rgba(255, 255, 255, 0.8); 
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2em;
+            color: #333;
+        }
+        .header p {
+            margin: 5px 0;
+            color: #666;
+            font-size: 1.1em;
+        }
+        .container {
+            display: flex;
+            width: 80%;
+        }
+        .bloc {
+            flex: 1;
+            padding: 10px;
+            display: grid;
+            grid-template-rows: repeat(6, 1fr);
+            gap: 10px;
+            border-radius: 5px;
+        }
+        .bloc-left {
+            background-color: #fdcae1;
+        }
+        .bloc-right {
+            background-color: #a5eea0;
+        }
+        .bloc h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .cell {
+            padding: 10px;
+            background-color: #fff;
+            border: 5px solid #ddd;
+            color: #666;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            
+        }
+        .cell:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+        .cell a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            height: 100%;
+            width: 100%;
+        }
     </style>
 </head>
-<body bgcolor="#fdcae1">
-    <center>
+<body>
+<br>
+<br>
+<div class="header">
+    <h1>Anna Tenza</h1>
+    <p><u>Sommaire</u></p>
+</div>
+
+<div class="container">
+    <div class="bloc bloc-left">
+        <h2><u>Travaux Pratiques</u></h2>
+        <div class="cell"><a href="TD1/index3.html"><b>TP n° 1</b></a></div>
+        <div class="cell"><a href="tp2/index.html"><b>TP n° 2</b></a></div>
+        <div class="cell"><a href="tp3/index.html"><b>TP n° 3</b></a></div>
+        <div class="cell"><a href="tp1basedonnees/index.html"><b>TP n° 4<br> Base de données</b></a></div>
+        <div class="cell"><a href="tp5/index.html"><b>TP n° 5</b></a></div>
         
-    <h1><u>TENZA Anna</u></h1>
-
-    
+    </div>
+    <div class="bloc bloc-right">
+        <h2><u>Missions</u></h2>
+        <div class="cell"><a href="Mission1/index2.html"><b>Mission n° 1</b></a></div>
+        <div class="cell"><a href="Mission2/index.html"><b>Mission n° 2</b></a></div>
+        <div class="cell"><a href="Mission3/index.html"><b>Mission n° 3 <br> Certifications RGPD</b></a></div>
+        <div class="cell"><a href="Mission4/index.html"><b>Mission n° 4</b></a></div>
+        <div class="cell"><a href="Mission5/index.html"><b>Mission n° 5</b></a></div>
+        
+    </div>
+</div>
+<footer>
     <br>
-    <h2>SOMMAIRE</h2>
-    <br>
-    <table>
-        <tr>
-            <td><a href="TD1/index3.html">TD n°1</a></td>
-        </tr>
-        <tr>
-            <td><a href="tp2/index.html">TP n°2</a></td>
-        </tr>
-        <tr>
-            <td><a href="tp3/index.html">TP n°3</a></td>
-        </tr>
-        <tr>
-            <td><a href="tp1basedonnees/index.html">TP n°1 Base de données</a>
-        </tr>
-        <tr>
-            <td><a href="tp5/index.html">TP n°5</a>
-        </tr>
-        <tr>
-            <td><a href="Mission1/index2.html">MISSION n°1</a></td>
-        </tr>
     
-        <tr>
-            <td><a href="Mission2/index.html">MISSION n°2</a></td>
-        </tr>
-       
-        <tr>
-            <td><a href="Mission3/index.html">MISSION n°3</a></td>
-        </tr>
-
-        <tr>
-            <td><a href="Mission4/index.html">MISSION n°4</a></td>
-        </tr>
-        <tr>
-            <td><a href="Mission5/index.html">MISSION n°5</a></td>
-        </tr>
-
-    </table>
-   
-</center>
-
-   
- 
+</footer>
 </body>
 </html>
